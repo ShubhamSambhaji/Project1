@@ -1,0 +1,61 @@
+--------------------------------------------------------------GIT CheatSheet -------------------------------------------------------------
+
+* - Analyze the term in simple words :- 
+a. Untracked :- Means you not added file to git or git not have any involvement in your file journey . 
+b. Staged :- After you track the file automatically goes in staged part This is a part where you commit and save your changes 
+c. Unmodified :- Unmodified comes when you commit the changes or save it 
+d. Modified :- Modified comes when you modifiy your commited file . In that case you need to again stage the file and commit it .
+
+
+
+1. To change username and email :-   git config --global  user.name xyz
+								    git config --global  user.email xyz@abc 
+
+2. To see username and email :-  git config --global  user.name
+						             gitcon fig --global  user.email 
+
+
+3. Start VS Code :- code . 
+
+4.  To init the file :- git init (select a folder to git)   { You have to commit your project intially to start your tracking  of folder}
+
+5. To see the status of all file :- git status 
+	To see the status in summarize view :- git status -s (basically it show the file status like modified, unmodified and deleted )
+
+6. To see the file with hidden items :- ls -lart 
+
+7. Add a file to GIT  or staged to the file :- git add index.html
+
+8- To commit or to save :- git commit 
+		After git commit you have to specify the change name and than press Esc and write :wq  to save it properly . 
+	to escape the step you have to write  git commit -m "Changes saved " and press enter . 
+
+
+9. To add all the file at once :- git add -A 
+
+10. To make the changes to last commit in a file  :- git checkout index.html 
+	To To make the changes to last commit to all  the file  :- git checkout -f 
+
+11. To see all the commit or log files :- git log 
+
+12. To see only the last commit from the log :- git log -p -1  (press Q to quit)
+
+13.  To compare working directory to staging area or commit (in simple it shows the the changes that you had made) :-  git diff 
+
+14. When you want to remove a file from staging area :-  git rm --cached waste.html
+
+15. To remove the file from the directory :- git rm waste.html 
+
+16. To write in file :- echo "content" > write.html 
+
+/ meaning this is a folder 
+
+16.  .gitignore file is the file when you want not track cretain file which is not necessary 
+		touch .gitignore and wrtie the file name mylog.txt (GIT  will ignore the particulare file mention in .gitignore )  {Whenever you write only file name it        	means apply on filw ehere it present irresprctive of directory and when you specify the file location along with that file means to consider only that file}
+	EG log.txt and log/log.txt , *.log or log/
+
+
+
+
+
+

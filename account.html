@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account </title>
+    <link rel="stylesheet" type="text/css" href="account.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    &nbsp;&nbsp;&nbsp;<img src="./images/header.png" alt="Dropzzy" id="img1">
+               </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Product.html">Products</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </nav>
+                <!-- <img src="./img/cart.png" alt="Cart" id="cart-icon">
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()"> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Page -->
+
+    <div class="account-page">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-2">
+                    <img src="final.png" id="imain">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="Login()" class="sh">Login</span>
+                            <span onclick="Register()" class="sh">Register</span>
+                            <hr id="Indicator">
+
+                        </div>
+                        <form id="LoginForm" action="login.php" method="post">
+                            <input type="text" placeholder="Username" name="username" required>
+                            <input type="password" placeholder="Password" name="password" required>
+                            <button type="submit" class="btn">Login </button>
+                            <a href=""><br>Forgot Password</a>
+                        </form>
+
+                        <form id="RegForm" action="register.php" method="post">
+                            <input type="email" placeholder="Email" name="email" required>
+                            
+
+                            <input type="text" placeholder="Username" name="username" required>
+                       
+
+                            <input type="password" placeholder="Password" name="password" required>
+                       
+                            
+
+                            <button type="submit" class="btn">Register</button>
+                            <!-- Add this div for displaying the success message -->
+                            <div id="registrationSuccess" style="display: none;">
+                                <p>Registration successful! You can now log in.</p>
+                                <!-- You can customize the success message as needed -->
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download our App</h3>
+                    <p>Download our App for Android and IOS Mobile</p>
+                    <div class="applogo">
+                        <img src="./images/play-store.png">
+                        <img src="./images/app-store.png">
+                    </div>
+                </div>
+
+                <div class="footer-col2">
+                    <img src="./images/footer.png" alt="">
+                    <p><br><br>Shop with confidence at Dropzzy and experience excellence in every purchase."</p>
+                </div>
+
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Whatsapp</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <p class="cr">Copyright @ 2023 - Dropzzy</p>
+        </div>
+    </div>
+
+
+    <!-- -------------JS for Toggle Form  -------------- -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        var LoginForm = document.getElementById("LoginForm")
+        var RegForm = document.getElementById("RegForm")
+        var Indicator = document.getElementById("Indicator")
+
+        function Login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+        function Register() {
+            console.log("Register function called");
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+
+
+            if (registrationStatus === "success") {
+                setTimeout(function () {
+                    window.location.href = 'index.html';
+                }, 9000);
+            } else if (registrationStatus === "error") {
+                console.log("Registration failed. " + registrationMessage);
+                alert("Registration failed. " + registrationMessage);
+            }
+        }
+
+
+       
+    </script>
+
+</html>

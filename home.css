@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: cornsilk; */
+    scroll-behavior: smooth;
+}
+
+
+::selection{
+    background-color: orange;
+    color: black;
+  }
+
+html , .navbar {
+    background-color: azure;
+}
+
+#img1 {
+    width: 169px;
+    height: 101px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: azure;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    text-decoration: none;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    /* text-decoration: none;  */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+nav ul li :hover{
+    color: red;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+/* Animation - Underline */
+li a::before {
+    /* Add a pseudo-element for the underline */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    /* Initially, no underline (scaled to 0 width) */
+    transform-origin: 100% 50%;
+    /* Start the animation from the right */
+    transition: transform 0.3s ease;
+    /* Add a transition for the animation */
+}
+
+li a:hover::before {
+    /* Show the underline on hover */
+    transform: scaleX(1);
+    /* Scale the underline to full width */
+}
+
+/* 
+.container{
+    max-width: 1300px;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+} */
+
+#col-2 {
+    margin-left: -35px;
+}
+
+.col-2 h3{
+    font-size: 43px;
+    margin-top: 178px;
+}
+
+#element {
+    font-family: 'Caveat', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 42px;
+    /* margin-bottom: 12px; */
+}
+
+.col-2 p {
+    font-family: 'Caveat', cursive;
+    font-family: 'Courgette', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    margin-top: 4px;
+    /* background-color: cornsilk; */
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+/* 
+.col-2{
+    min-width: 300px;
+    flex-basis: 50%;
+} */
+
+#new{
+    width: 1039px;
+    height: 682px;
+    margin-right: -329px;
+    margin-bottom: -68px;
+    margin-top: -56px;
+}
+
+.col-2 img {
+    width: 591px;
+    height: 682px;
+    margin-right: -104px;
+    margin-bottom: -68px;
+    margin-top: -56px;
+}
+
+#shoes{
+    height: 275px;
+}
+
+.col-2 h1 {
+    font-size: 35px;
+    line-height: 45px;
+    margin: 13px 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+    /* font-style: italic; */
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: black;
+    color: white;
+    margin: 15px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+
+}
+
+.btn:hover {
+    background-color: rgb(171, 142, 98);
+    color: white;
+
+
+}
+
+#cart-icon {
+    width: 38px;
+    height: 34px;
+    margin-left: 1px;
+}
+
+#cart-icon:hover{
+    cursor: pointer;
+    /* color: red; */
+}
+
+/* Featured */
+
+.categories {
+    margin: 70px 0;
+
+}
+
+.col-3 {
+    flex-basis: 30%;
+    /* min-height: 250px; */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: revert;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.small-container {
+    max-width: 1080px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 34px;
+    margin: auto;
+}
+
+.col-4 {
+    margin-bottom: 50px;
+    flex-basis: 25%;
+    padding: 1px;
+    min-width: 200px;
+    display: flex;
+    align-items: revert;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 90%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 23px;
+    line-height: 60px;
+    position: relative;
+    margin: 0 auto 80px;
+    color: #555;
+}
+
+.title::after {
+    content: '';
+    background-color: rgb(231, 145, 8);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    margin-top: 12px;
+    color: #555;
+    font-weight: normal;
+    font-family: 'Sedgwick Ave Display', cursive;
+
+}
+
+.col-4 p {
+    font-size: 17px;
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+
+}
+
+.rating i {
+    color: rgb(231, 145, 8);
+}
+
+/* Offer  */
+
+.offer {
+    margin-top: -26px;
+    padding: 56px 0;
+}
+
+.offer-title {
+    font-size: 20px;
+    color: #555;
+    font-family: 'Sedgwick Ave Display', cursive;
+    margin-bottom: 18px;
+}
+
+.offer-product {
+    font-size: 29px;
+    font-family: 'Sedgwick Ave Display', cursive;
+
+}
+
+.small {
+    font-size: 13px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-style: italic;
+    color: #555;
+
+}
+
+.col-2 .offer-img {
+    padding: 20px;
+}
+
+/* Gallery */
+
+.gallery {
+    padding: 50px;
+    display: flex;
+}
+
+.galleryItem {
+    flex: 1;
+    padding: 50px;
+}
+
+.galleryImg {
+    width: 100%;
+    border-radius: 17px;
+}
+
+/* Testominal */
+.testimonial {
+    padding-top: 100px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+
+}
+
+.testimonial .col-3 img {
+    width: 28%;
+    display: block;
+    /* Ensure the image is centered within its container */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+    font-size: 31px;
+    margin-bottom: 2px;
+}
+
+.col-3 p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #777;
+}
+
+
+.col-3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 20px;
+}
+
+/* Brands */
+/* .brands{
+    margin: 100px auto;
+}
+
+.col-5{
+    width: 160px;
+}
+
+.col-5 img{
+    filter: grayscale(100%);
+    background-color:cornsilk ;
+} */
+
+/* Footer */
+.footer {
+    background: black;
+    /* Dark background color */
+    color: #fff;
+    /* White text color */
+    padding: 32px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    /* White color for links */
+    text-decoration: none;
+    margin: 0 10px;
+    /* Add spacing between links */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    /* Add an underline on hover */
+}
+
+.footer p {
+    font-size: 17px;
+    margin: 9px -25px
+}
+
+/* Center the footer content horizontally */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-col2 img {
+    width: 184px;
+    margin-bottom: 2px;
+    margin-top: -19px;
+}
+
+.footer-col3 ul li:hover, .footer-col4 ul li:hover{
+    color: rgb(221, 180, 16);
+    cursor: pointer;
+}
+
+
+.footer h3 {
+    font-size: 25px;
+    margin-bottom: 11px;
+}
+
+.footer h3:hover{
+    color: red;
+}
+
+.footer-col3,
+.footer-col4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.applogo {
+    margin-top: 20px;
+}
+
+.applogo img {
+    width: 140px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 29px 41px;
+}
+
+.cr {
+    text-align: center;
+}
+
+
+.applogo:hover {
+    cursor: pointer;
+}
+
+/* Responsive */
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+
+.payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+
+/* Media Query for Menu  */
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    nav ul li a {
+        color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+
+    }
+}
+

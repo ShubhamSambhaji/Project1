@@ -1,0 +1,130 @@
+
+/* back */
+.back-button {
+  position: absolute;
+  top: 44px;
+  left: 20px;
+  background-color: black;
+  padding: 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1084;
+  transition: background-color 0.3s;
+  width: 47px;
+  height: 37px;
+  transform: translateY(-71%); /* Adjust the vertical position */
+
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: azure;
+  font-family: Helvetica, sans-serif;
+  color: rgb(211, 211, 211);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.heading {
+  margin-top: 229px;
+  margin-right: 108px;
+  color: black;
+}
+
+
+
+.container {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  margin-top: 96px;
+}
+
+.front {
+  background-color: azure;
+  
+}
+
+#i1{
+  width: 192px;
+  height: 187px;
+  margin-top: 157px;
+  margin-left: 84px;
+}
+
+#back1{
+  width: 351px;
+  height: 500px;
+  border-radius: 22px;
+}
+
+#back2{
+  border-radius: 33px;
+  width: 350px;
+  height: 501px;
+}
+
+ #back3{
+  width: 350px;
+  height: 500px;
+  border-radius: 31px;
+} 
+
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+
+/* Footer */
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #212226;
+  padding: 20px;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+}
+

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Us - Responsive Page Design</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/news2.png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+    </style>
+    <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+<!-- back button -->
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="white" d="M18 12H5.83l5.59-5.59L12 5l-8 8 8 8 1.41-1.41L5.83 13H18v-1z" />
+            </svg>
+        </a>
+        
+
+
+        <section>
+            <div class="container">
+                <div class="contactInfo"> 
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="./images/location.png"></span>
+                                <span>184 Ram Street<br>
+                                    Sector 14, India<br>
+                                    11472</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span><img src="./images/mail.png"></span>
+                                <!-- <span>nassosanagn@gmail.com</span> -->
+                                <span><a href = "mailto: Dropzzy@gmail.com">Dropzzy@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span><img src="./images/call.png"></span>
+                                <span>145-674-456-12</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/nassosanagn/"><img src="./images/1.png"></a></li>
+                        <li><a href="https://www.instagram.com/nassosanagn_/?hl=el"><img src="./images/3.png"></a></li>
+                        <li><a href="https://twitter.com/nassosanagn"><img src="./images/2.png"></a></li>
+                        <li><a href="https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/"><img src="./images/5.png"></a></li>
+                        
+                    </ul>
+                </div>
+                <form action="./contact.php" method="post">
+                    <div class="contactForm">
+                        <h2>Send a Message</h2>
+                        <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="fname" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="lname" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="Pnumber" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+
+                    </form>
+                    </div>
+                </div>
+                    
+                    
+             
+        </section>
+    </body>
+</html>

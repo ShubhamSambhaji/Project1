@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dropzzy-Checkout</title>
+  <link rel="stylesheet" href="./checkout.css">
+
+  <script>
+    function handleCheckout() {
+      // Validate the form fields using JavaScript
+      var fname = document.getElementById("fname").value;
+      var cardNumber = document.getElementById("card_number").value;
+      var cardType = document.getElementById("card_type").value;
+      var expDate = document.getElementById("exp_date").value;
+      var cvv = document.getElementById("cvv").value;
+
+      if (fname === "" || cardNumber === "" || cardType === "" || expDate === "" || cvv === "") {
+        alert("Please fill out all required fields.");
+      } else {
+        alert("Item purchased successfully!");
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- back button -->
+  <a href="index.html" class="back-button">
+    &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 29">
+      <path fill="white" d="M18 12H5.83l5.59-5.59L12 5l-8 8 8 8 1.41-1.41L5.83 13H18v-1z" />
+    </svg>
+  </a>
+
+  <!-- CheckOut -->
+  <div class="mainscreen">
+    <div class="card">
+      <div class="leftside">
+        <img src="images/walli.webp" class="product" />
+      </div>
+      <div class="rightside">
+        <form name="myForm"  method="post" action="./index.html">
+          <h1>CheckOut</h1>
+          <h2>Payment Information</h2>
+
+          <p>Cardholder Name</p>
+          <input type="text" class="inputbox" name="fname"  id="fname">
+
+          <p>Card Number</p>
+          <input type="number" class="inputbox" name="card_number" id="card_number" maxlength="10" minlength="1"/>
+
+          <p>Card Type</p>
+          <select class="inputbox" name="card_type" id="card_type">
+            <option value="">--Select a Card Type--</option>
+            <option value="Visa">Visa</option>
+            <option value="RuPay">RuPay</option>
+            <option value="MasterCard">MasterCard</option>
+          </select>
+
+          <div class="expcvv">
+            <p class="expcvv_text">Expiry</p>
+            <input type="date" class="inputbox" name="exp_date" id="exp_date"/>
+
+            <p class="expcvv_text2">CVV</p>
+            <input type="password" class="inputbox" name="cvv" id="cvv"/>
+          </div>
+          <p></p>
+          <button type="button" class="button" id="custom-buy-button" value="submit"  onclick="handleCheckout()">CheckOut</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+ </body>
+
+</html>
